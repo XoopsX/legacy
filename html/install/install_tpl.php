@@ -21,7 +21,7 @@
 
 <body>
 <div id="container">
-<form action="index.php" method="post" style="margin:0">
+<form action="index.php" method="<?php echo $method; ?>" style="margin:0">
 
 
 <br />

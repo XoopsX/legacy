@@ -47,5 +47,6 @@
     }
     $wizard->assign('reports', $mm->report());
     $wizard->assign('message',_INSTALL_L62);
+    $wizard->assign('method', 'get');
     $wizard->render('install_dbsave.tpl.php');
 ?>

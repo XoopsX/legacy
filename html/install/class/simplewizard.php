@@ -89,6 +89,7 @@ class SimpleWizard {
     }
     
     function render($fname='') {
+        $method = (empty($this->_v['method']) || $this->_v['method'] !== 'get')? 'post' : 'get';
         if ($fname && file_exists($this->_template_path.'/'.$fname)) {
             ob_start();
             include $this->_template_path.'/'.$fname;

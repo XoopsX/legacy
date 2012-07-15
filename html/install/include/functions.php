@@ -192,7 +192,7 @@ function b_reload($option=''){
     	$op = 'langselect';
     }
 
-    return  '<input type="image" src="img/reload.png" class="reload" title="Reload" value="'._INSTALL_L200.'" onclick="location.reload();" />';
+    return  '<input type="image" src="img/reload.png" class="reload" title="Reload" value="'._INSTALL_L200.'" onclick="location.reload();return false;" />';
 }
 
 function b_next($option=null){

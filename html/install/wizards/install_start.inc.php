@@ -18,6 +18,7 @@
 		$wizard->assign('message',_INSTALL_L168);
 		$wizard->setReload(true);
 	}
+	$wizard->assign('method', 'get');
 	$wizard->render('install_start.tpl.php');
 
 ?>

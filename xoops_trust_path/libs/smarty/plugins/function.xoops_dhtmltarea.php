@@ -62,6 +62,14 @@ function smarty_function_xoops_dhtmltarea($params, &$smarty)
 		$params['value'] = isset($params['value']) ? $textFilter->toEdit($params['value']) : null;
 		$params['id'] = isset($params['id']) ? trim($params['id']) : XOOPS_DHTMLTAREA_DEFID_PREFIX . $params['name'];
 	
+		if (!empty($params['editor']) && $params['editor'] !== 'none') {
+			if (! $params['class']) {
+				$params['class'] = $params['editor'];
+			} else {
+				$params['class'] .= ' ' . $params['editor'];
+			}
+		}
+		
 		//
 		// Build the object for output.
 		//
@@ -72,6 +80,7 @@ function smarty_function_xoops_dhtmltarea($params, &$smarty)
 			break;
 		
 		case 'none':
+		case 'plain':
 			XCube_DelegateUtils::call("Site.TextareaEditor.None.Show", new XCube_Ref($html), $params);
 			break;
 		case 'bbcode':

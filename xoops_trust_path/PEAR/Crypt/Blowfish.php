@@ -136,7 +136,7 @@ class Crypt_Blowfish
      * @deprecated Since 1.1.0
      * @see Crypt_Blowfish::factory()
      */
-    public function Crypt_Blowfish($key)
+    public function __construct($key)
     {
         $this->_crypt =& Crypt_Blowfish::factory('ecb', $key);
         if (!PEAR::isError($this->_crypt)) {

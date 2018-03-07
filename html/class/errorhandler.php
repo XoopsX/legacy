@@ -63,7 +63,7 @@ class XoopsErrorHandler
      * registering an error handler, the setting or 'error_reporting' is
      * ignored and *everything* is trapped.
      */
-    public function XoopsErrorHandler()
+    public function __construct()
     {
         set_error_handler('XoopsErrorHandler_HandleError');
         register_shutdown_function('XoopsErrorHandler_Shutdown');

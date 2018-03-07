@@ -13,7 +13,7 @@ class User_AbstractViewAction extends User_Action
     public $mObject = null;
     public $mObjectHandler = null;
 
-    public function User_AbstractViewAction()
+    public function __construct()
     {
     }
 

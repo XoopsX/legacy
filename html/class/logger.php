@@ -60,7 +60,7 @@ class XoopsLogger
      *
      * @access  private
      */
-    public function XoopsLogger()
+    public function __construct()
     {
     }
 

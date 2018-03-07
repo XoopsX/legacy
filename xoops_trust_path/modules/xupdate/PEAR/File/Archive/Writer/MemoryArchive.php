@@ -69,9 +69,11 @@ class File_Archive_Writer_MemoryArchive extends File_Archive_Writer_Archive
     /**
      * @see File_Archive_Writer::File_Archive_Writer()
      */
-    public function File_Archive_Writer_MemoryArchive($filename, &$t, $stat = array(), $autoClose = true)
+    public function __construct($filename, &$t, $stat = array(), $autoClose = true)
     {
-        parent::File_Archive_Writer_Archive($filename, $t, $stat, $autoClose);
+//        parent::File_Archive_Writer_Archive($filename, $t, $stat, $autoClose);
+        parent::__construct($filename, $t, $stat, $autoClose);
+
     }
 
     /**

@@ -37,9 +37,10 @@ class XoopsImagecategory extends XoopsObject
 {
     public $_imageCount;
 
-    public function XoopsImagecategory()
+    public function __construct()
     {
-        $this->XoopsObject();
+//        $this->XoopsObject();
+        parent::__construct();
         $this->initVar('imgcat_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('imgcat_name', XOBJ_DTYPE_TXTBOX, null, true, 100);
         $this->initVar('imgcat_display', XOBJ_DTYPE_INT, 1, false);

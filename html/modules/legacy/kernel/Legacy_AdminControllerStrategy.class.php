@@ -33,12 +33,13 @@ class Legacy_AdminControllerStrategy extends Legacy_AbstractControllerStrategy
      */
     public $_mSpecialActions = array("Help", "CommentList");
 
-    public function Legacy_AdminControllerStrategy(&$controller)
+    public function __construct($controller)
     {
         global $xoopsOption;
         
-        parent::Legacy_AbstractControllerStrategy($controller);
-        
+//        parent::Legacy_AbstractControllerStrategy($controller);
+        parent::__construct($controller);
+
         //
         // TODO We have to develop complated-switching-controller-mechanizm.
         //

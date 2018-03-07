@@ -60,13 +60,13 @@ class File_Archive_Writer_Zip extends File_Archive_Writer_MemoryArchive
      */
     public $central = "";
 
-    public function File_Archive_Writer_Zip($filename, &$innerWriter,
+    public function __construct($filename, &$innerWriter,
                                      $stat=array(), $autoClose = true)
     {
         global $_File_Archive_Options;
-        parent::File_Archive_Writer_MemoryArchive(
-                    $filename, $innerWriter, $stat, $autoClose
-                );
+//        parent::File_Archive_Writer_MemoryArchive($filename, $innerWriter, $stat, $autoClose);
+        parent::__construct($filename, $innerWriter, $stat, $autoClose);
+
 
         $this->compressionLevel = File_Archive::getOption('zipCompressionLevel', 9);
     }

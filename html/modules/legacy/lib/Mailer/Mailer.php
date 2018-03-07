@@ -22,7 +22,7 @@ class Legacy_Mailer extends PHPMailer
      */
     public $mConvertLocal = null;
     
-    public function Legacy_Mailer()
+    public function __construct()
     {
         $this->mConvertLocal =new XCube_Delegate();
         $this->mConvertLocal->register('Legacy_Mailer.ConvertLocal');

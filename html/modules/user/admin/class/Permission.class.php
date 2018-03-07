@@ -19,7 +19,7 @@ class User_Permission
      */
     public $mItem;
 
-    public function User_Permission($groupId, &$item)
+    public function __construct($groupId, &$item)
     {
         $this->mGroupId = $groupId;
         $this->mItem =& $item;
@@ -142,7 +142,7 @@ class User_PermissionModuleItem extends User_PermissionItem
 {
     public $mModule;
     
-    public function User_PermissionModuleItem(&$module)
+    public function __construct(&$module)
     {
         $this->mModule =& $module;
     }
@@ -197,7 +197,7 @@ class User_PermissionBlockItem extends User_PermissionItem
 {
     public $mBlock;
     
-    public function User_PermissionBlockItem(&$block)
+    public function __construct(&$block)
     {
         $this->mBlock =& $block;
     }
@@ -249,7 +249,7 @@ class User_PermissionSystemAdminItem extends User_PermissionItem
     public $mId;
     public $mName;
     
-    public function User_PermissionSystemAdminItem($id, $name)
+    public function __construct($id, $name)
     {
         $this->mId = $id;
         $this->mName = $name;

@@ -43,7 +43,7 @@ class XoopsThemeSetParser extends SaxParser
     public $imagesData = array();
     public $templatesData = array();
 
-    public function XoopsThemeSetParser(&$input)
+    public function __construct(&$input)
     {
         $this->SaxParser($input);
         $this->addTagHandler(new ThemeSetThemeNameHandler());
@@ -123,7 +123,7 @@ class XoopsThemeSetParser extends SaxParser
 class ThemeSetDateCreatedHandler extends XmlTagHandler
 {
 
-    public function ThemeSetDateCreatedHandler()
+    public function __construct()
     {
     }
 
@@ -146,7 +146,7 @@ class ThemeSetDateCreatedHandler extends XmlTagHandler
 
 class ThemeSetAuthorHandler extends XmlTagHandler
 {
-    public function ThemeSetAuthorHandler()
+    public function __construct()
     {
     }
 
@@ -168,7 +168,7 @@ class ThemeSetAuthorHandler extends XmlTagHandler
 
 class ThemeSetDescriptionHandler extends XmlTagHandler
 {
-    public function ThemeSetDescriptionHandler()
+    public function __construct()
     {
     }
 
@@ -194,7 +194,7 @@ class ThemeSetDescriptionHandler extends XmlTagHandler
 
 class ThemeSetGeneratorHandler extends XmlTagHandler
 {
-    public function ThemeSetGeneratorHandler()
+    public function __construct()
     {
     }
 
@@ -217,7 +217,7 @@ class ThemeSetGeneratorHandler extends XmlTagHandler
 
 class ThemeSetNameHandler extends XmlTagHandler
 {
-    public function ThemeSetNameHandler()
+    public function __construct()
     {
     }
 
@@ -243,7 +243,7 @@ class ThemeSetNameHandler extends XmlTagHandler
 
 class ThemeSetEmailHandler extends XmlTagHandler
 {
-    public function ThemeSetEmailHandler()
+    public function __construct()
     {
     }
 
@@ -266,7 +266,7 @@ class ThemeSetEmailHandler extends XmlTagHandler
 
 class ThemeSetLinkHandler extends XmlTagHandler
 {
-    public function ThemeSetLinkHandler()
+    public function __construct()
     {
     }
 
@@ -289,7 +289,7 @@ class ThemeSetLinkHandler extends XmlTagHandler
 
 class ThemeSetTemplateHandler extends XmlTagHandler
 {
-    public function ThemeSetTemplateHandler()
+    public function __construct()
     {
     }
 
@@ -312,7 +312,7 @@ class ThemeSetTemplateHandler extends XmlTagHandler
 
 class ThemeSetImageHandler extends XmlTagHandler
 {
-    public function ThemeSetImageHandler()
+    public function __construct()
     {
     }
 
@@ -335,7 +335,7 @@ class ThemeSetImageHandler extends XmlTagHandler
 
 class ThemeSetModuleHandler extends XmlTagHandler
 {
-    public function ThemeSetModuleHandler()
+    public function __construct()
     {
     }
 
@@ -359,7 +359,7 @@ class ThemeSetModuleHandler extends XmlTagHandler
 
 class ThemeSetFileTypeHandler extends XmlTagHandler
 {
-    public function ThemeSetFileTypeHandler()
+    public function __construct()
     {
     }
 
@@ -382,7 +382,7 @@ class ThemeSetFileTypeHandler extends XmlTagHandler
 
 class ThemeSetTagHandler extends XmlTagHandler
 {
-    public function ThemeSetTagHandler()
+    public function __construct()
     {
     }
 

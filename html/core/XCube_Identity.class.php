@@ -25,7 +25,7 @@ class XCube_Identity
      */
     public $_mAuthenticationType = "";
     
-    public function XCube_Identity()
+    public function __construct()
     {
     }
     
@@ -91,7 +91,7 @@ class XCube_Principal
      */
     public $_mRoles = array();
     
-    public function XCube_Principal($identity, $roles = array())
+    public function __construct($identity, $roles = array())
     {
         $this->mIdentity =& $identity;
         $this->_mRoles = $roles;

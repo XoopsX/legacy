@@ -14,7 +14,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 class LegacyBlockctypeObject extends XoopsSimpleObject
 {
-    public function LegacyBlockctypeObject()
+    public function __construct()
     {
         $this->initVar('type', XOBJ_DTYPE_STRING, '', true);
         $this->initVar('label', XOBJ_DTYPE_STRING, '', true, 255);
@@ -25,7 +25,7 @@ class LegacyBlockctypeHandler extends XoopsObjectHandler
 {
     public $_mResults = array();
     
-    public function LegacyBlockctypeHandler(&$db)
+    public function __construct(&$db)
     {
         $t_arr = array(
                 'H' => _AD_LEGACY_LANG_CTYPE_HTML,

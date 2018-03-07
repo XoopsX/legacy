@@ -6,7 +6,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 class UserGroupsObject extends XoopsSimpleObject
 {
-    public function UserGroupsObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

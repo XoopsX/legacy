@@ -51,7 +51,7 @@ class XoopsDownloader
     /**
      * Constructor
      */
-    public function XoopsDownloader()
+    public function __construct()
     {
         //EMPTY
     }

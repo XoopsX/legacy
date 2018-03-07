@@ -54,7 +54,7 @@ class Legacy_DebuggerManager
 
 class Legacy_AbstractDebugger
 {
-    public function Legacy_AbstractDebugger()
+    public function __construct()
     {
     }
 

@@ -96,7 +96,7 @@ class CriteriaElement
     /**
      * Constructor
      **/
-    public function CriteriaElement()
+    public function __construct()
     {
     }
 
@@ -330,7 +330,7 @@ class CriteriaCompo extends CriteriaElement
      * @param   object  $ele
      * @param   string  $condition
      **/
-    public function CriteriaCompo($ele=null, $condition='AND')
+    public function __construct($ele=null, $condition='AND')
     {
         if (isset($ele) && is_object($ele)) {
             $this->add($ele, $condition);
@@ -465,7 +465,7 @@ class Criteria extends CriteriaElement
      * @param   string  $value
      * @param   string  $operator
      **/
-    public function Criteria($column, $value='', $operator='=', $prefix = '', $function = '')
+    public function __construct($column, $value='', $operator='=', $prefix = '', $function = '')
     {
         $this->prefix = $prefix;
         $this->function = $function;

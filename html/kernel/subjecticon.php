@@ -6,7 +6,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 class XoopsSubjecticon extends XoopsObject
 {
-    public function XoopsSubjecticon()
+    public function __construct()
     {
         $this->initVar('filename', XOBJ_DTYPE_TXTBOX, null, true, 255);
     }
@@ -16,7 +16,7 @@ class XoopsSubjecticonHandler extends XoopsObjectHandler
 {
     public $_mResult;
     
-    public function XoopsSubjecticonHandler(&$db)
+    public function __construct(&$db)
     {
         require_once XOOPS_ROOT_PATH . "/class/xoopslists.php";
         $this->_mResult =& XoopsLists::getSubjectsList();

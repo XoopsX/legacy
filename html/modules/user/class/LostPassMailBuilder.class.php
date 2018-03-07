@@ -20,7 +20,7 @@ class User_LostPassMailDirector
     public $mXoopsConfig;
     public $mExtraVars;
     
-    public function User_LostPassMailDirector(&$builder, &$user, &$xoopsConfig, $extraVars = array())
+    public function __construct(&$builder, &$user, &$xoopsConfig, $extraVars = array())
     {
         $this->mBuilder =& $builder;
         $this->mXoopsUser =& $user;
@@ -49,7 +49,7 @@ class User_LostPass1MailBuilder
 {
     public $mMailer;
     
-    public function User_LostPass1MailBuilder()
+    public function __construct()
     {
         $this->mMailer =& getMailer();
         $this->mMailer->useMail();

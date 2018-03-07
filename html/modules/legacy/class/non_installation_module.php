@@ -30,9 +30,11 @@ class LegacyNon_installation_moduleHandler extends XoopsObjectHandler
      */
     public $_mExclusions = array(".", "..", "CVS");
     
-    public function LegacyNon_installation_moduleHandler(&$db)
+    public function __construct(&$db)
     {
-        parent::XoopsObjectHandler($db);
+//        parent::XoopsObjectHandler($db);
+        parent::__construct($db);
+
         $this->_setupObjects();
     }
 

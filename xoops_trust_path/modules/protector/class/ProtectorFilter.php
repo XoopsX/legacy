@@ -5,7 +5,7 @@ class ProtectorFilterAbstract
 {
     public $protector = null ;
 
-    public function ProtectorFilterAbstract()
+    public function __construct()
     {
         $this->protector =& Protector::getInstance() ;
         $lang = empty($GLOBALS['xoopsConfig']['language']) ? @$this->protector->_conf['default_lang'] : $GLOBALS['xoopsConfig']['language'] ;
@@ -38,7 +38,7 @@ class ProtectorFilterHandler
     public $filters_base = '' ;
     public $filters_byconfig = '' ;
 
-    public function ProtectorFilterHandler()
+    public function __construct()
     {
         $this->protector =& Protector::getInstance() ;
         $this->filters_base = dirname(dirname(__FILE__)).'/filters_enabled' ;

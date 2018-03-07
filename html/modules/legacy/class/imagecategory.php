@@ -30,7 +30,7 @@ class LegacyImagecategoryObject extends XoopsSimpleObject
     public $_mUploadGroupsLoadedFlag = false;
     
 
-    public function LegacyImagecategoryObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

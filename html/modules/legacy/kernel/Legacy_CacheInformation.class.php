@@ -56,7 +56,7 @@ class Legacy_AbstractCacheInformation
      */
     public $mAttributes = array();
     
-    public function Legacy_AbstractCacheInformation()
+    public function __construct()
     {
     }
     
@@ -127,9 +127,10 @@ class Legacy_ModuleCacheInformation extends Legacy_AbstractCacheInformation
       */
      public $mGetCacheFilePath = null;
      
-    public function Legacy_ModuleCacheInformation()
+    public function __construct()
     {
-        parent::Legacy_AbstractCacheInformation();
+//        parent::Legacy_AbstractCacheInformation();
+        parent::__construct();
         $this->mGetCacheFilePath = new XCube_Delegate();
         $this->mGetCacheFilePath->register('Legacy_ModuleCacheInformation.GetCacheFilePath');
     }
@@ -184,9 +185,10 @@ class Legacy_BlockCacheInformation extends Legacy_AbstractCacheInformation
       */
      public $mGetCacheFilePath = null;
      
-    public function Legacy_BlockCacheInformation()
+    public function __construct()
     {
-        parent::Legacy_AbstractCacheInformation();
+//        parent::Legacy_AbstractCacheInformation();
+        parent::__construct();
         $this->mGetCacheFilePath = new XCube_Delegate();
         $this->mGetCacheFilePath->register('Legacy_BlockCachInformation.getCacheFilePath');
     }

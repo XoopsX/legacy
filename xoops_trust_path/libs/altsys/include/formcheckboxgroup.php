@@ -65,9 +65,11 @@ class AltsysFormCheckboxGroup extends XoopsFormCheckbox
      * @param	bool	$include_anon	Include group "anonymous"?
      * @param	mixed	$value	    	Pre-selected value (or array of them).
      */
-    public function AltsysFormCheckboxGroup($caption, $name, $include_anon=false, $value=null)
+    public function __construct($caption, $name, $include_anon=false, $value=null)
     {
-        $this->XoopsFormCheckbox($caption, $name, $value);
+//        $this->XoopsFormCheckbox($caption, $name, $value);
+        parent::__construct($caption, $name, $value);
+
         $member_handler =& xoops_gethandler('member');
         if (!$include_anon) {
             $options = $member_handler->getGroupList(new Criteria('groupid', XOOPS_GROUP_ANONYMOUS, '!='));

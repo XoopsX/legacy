@@ -36,7 +36,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 class XoopsMailerLocal extends XoopsMailer
 {
 
-    public function XoopsMailerLocal()
+    public function __construct()
     {
         $this->multimailer = new XoopsMultiMailerLocal();
         $this->reset();
@@ -121,9 +121,10 @@ class XoopsMultiMailerLocal extends XoopsMultiMailer
 
     public $needs_encode;
 
-    public function XoopsMultiMailerLocal()
+    public function __construct()
     {
-        $this->XoopsMultiMailer();
+//        $this->XoopsMultiMailer();
+        parent::__construct();
 
         $this->needs_encode = true;
         if (function_exists('mb_convert_encoding')) {

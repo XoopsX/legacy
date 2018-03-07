@@ -35,7 +35,7 @@ class Profile_AbstractFilterForm
     /**
      * @protected
      */
-    public function Profile_AbstractFilterForm()
+    public function __construct()
     {
         $this->_mCriteria =new CriteriaCompo();
     }

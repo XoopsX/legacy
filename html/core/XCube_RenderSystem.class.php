@@ -49,7 +49,7 @@ class XCube_RenderTarget
     
     public $mCacheTime = null;
         
-    public function XCube_RenderTarget()
+    public function __construct()
     {
     }
 
@@ -152,7 +152,7 @@ class XCube_RenderSystem
 
     public $mRenderMode = XCUBE_RENDER_MODE_NORMAL;
     
-    public function XCube_RenderSystem()
+    public function __construct()
     {
     }
     

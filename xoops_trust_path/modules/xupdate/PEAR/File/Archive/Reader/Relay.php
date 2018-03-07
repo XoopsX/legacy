@@ -45,7 +45,7 @@ class File_Archive_Reader_Relay extends File_Archive_Reader
      */
     public $source;
 
-    public function File_Archive_Reader_Relay(&$source)
+    public function __construct(&$source)
     {
         $this->source =& $source;
     }

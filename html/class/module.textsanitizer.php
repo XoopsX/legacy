@@ -76,7 +76,7 @@ class MyTextSanitizer
     *
     * @todo Sofar, this does nuttin' ;-)
     */
-    public function MyTextSanitizer()
+    public function __construct()
     {
         $this->mMakeClickablePostFilter =new XCube_Delegate();
         $this->mMakeClickablePostFilter->register('MyTextSanitizer.MakeClickablePostFilter');

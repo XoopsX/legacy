@@ -8,7 +8,7 @@ class UserOnlineObject extends XoopsSimpleObject
 {
     public $mModule = null;
     
-    public function UserOnlineObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

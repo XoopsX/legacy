@@ -69,7 +69,7 @@ class XoopsDatabase
          * 
          * will always fail, because this is an abstract class!
          */
-        public function XoopsDatabase()
+        public function __construct()
         {
             // exit("Cannot instantiate this class directly");
         }

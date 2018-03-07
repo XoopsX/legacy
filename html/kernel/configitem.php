@@ -71,7 +71,7 @@ class XoopsConfigItem extends XoopsObject
     /**
      * Constructor
      */
-    public function XoopsConfigItem()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

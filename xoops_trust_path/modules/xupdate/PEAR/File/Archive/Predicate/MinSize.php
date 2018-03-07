@@ -43,7 +43,7 @@ class File_Archive_Predicate_MinSize extends File_Archive_Predicate
     /**
      * @param int $minSize minimal size of the file (in Bytes)
      */
-    public function File_Archive_Predicate_MinSize($minSize)
+    public function __construct($minSize)
     {
         $this->minSize = $minSize;
     }

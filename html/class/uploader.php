@@ -102,7 +102,7 @@ class XoopsMediaUploader
      * @param   int     $maxHeight
      * @param   int     $cmodvalue
      **/
-    public function XoopsMediaUploader($uploadDir, $allowedMimeTypes, $maxFileSize=0, $maxWidth=null, $maxHeight=null)
+    public function __construct($uploadDir, $allowedMimeTypes, $maxFileSize=0, $maxWidth=null, $maxHeight=null)
     {
         @$this->extensionToMime = include(XOOPS_ROOT_PATH . '/class/mimetypes.inc.php');
         if (!is_array($this->extensionToMime)) {

@@ -120,7 +120,7 @@ class XCube_Root
     /**
      * @internal
      */
-    public function XCube_Root()
+    public function __construct()
     {
     }
 

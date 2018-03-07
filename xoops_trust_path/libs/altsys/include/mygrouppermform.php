@@ -252,7 +252,7 @@ class MyXoopsGroupFormCheckBox extends XoopsFormElement
     /**
      * Constructor
      */
-    public function MyXoopsGroupFormCheckBox($caption, $name, $groupId, $values = null)
+    public function __construct($caption, $name, $groupId, $values = null)
     {
         $this->setCaption($caption);
         $this->setName($name);

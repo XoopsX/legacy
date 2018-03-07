@@ -24,7 +24,7 @@ class EasyLex_SQLToken
     public $mType = EASYLEX_SQL_UNKNOWN;
     public $mValue = "";
     
-    public function EasyLex_SQLToken($type, $value)
+    public function __construct($type, $value)
     {
         $this->mType = $type;
         $this->mValue = $value;

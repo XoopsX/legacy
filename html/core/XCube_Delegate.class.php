@@ -36,7 +36,7 @@ class XCube_Ref
      * @public Constructor.
      * @param $obj mixed
      */
-    public function XCube_Ref(&$obj)
+    public function __construct(&$obj)
     {
         $this->_mObject =& $obj;
     }
@@ -151,7 +151,7 @@ class XCube_Delegate
      *   $delegate =new XCube_Delegate("string", "string");
      * \endcode
      */
-    public function XCube_Delegate()
+    public function __construct()
     {
         if (func_num_args()) {
             $this->_setSignatures(func_get_args());
@@ -412,7 +412,7 @@ class XCube_DelegateManager
      * @public
      * @brief Constructor.
      */
-    public function XCube_DelegateManager()
+    public function __construct()
     {
     }
     
@@ -557,7 +557,7 @@ class XCube_DelegateUtils
      * @private
      * @brief Private Construct. In other words, it's possible to create an instance of this class.
      */
-    public function XCube_DelegateUtils()
+    public function __construct()
     {
     }
 

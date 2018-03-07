@@ -10,7 +10,9 @@ class Message_Module extends Legacy_ModuleAdapter
 {
     public function __construct(&$xoopsModule)
     {
-        parent::Legacy_ModuleAdapter($xoopsModule);
+//        parent::Legacy_ModuleAdapter($xoopsModule);
+        parent::__construct($xoopsModule);
+
     }
   
     public function hasAdminIndex()

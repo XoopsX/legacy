@@ -27,7 +27,7 @@ class Profile_ActionFrame
      */
     public $mCreateAction = null;
     
-    public function Profile_ActionFrame($admin)
+    public function __construct($admin)
     {
         $this->mAdminFlag = $admin;
         $this->mCreateAction =new XCube_Delegate();
@@ -148,7 +148,7 @@ class Profile_ActionFrame
 
 class Profile_Action
 {
-    public function Profile_Action()
+    public function __construct()
     {
     }
     

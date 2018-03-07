@@ -26,7 +26,7 @@ class UserMailjobObject extends XoopsSimpleObject
      */
     public $mSend = null;
     
-    public function UserMailjobObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

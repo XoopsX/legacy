@@ -11,7 +11,7 @@ require_once XOOPS_ROOT_PATH.'/modules/legacy/admin/class/ModuleUpdater.class.ph
 
 class Message_myUpdater extends Legacy_ModulePhasedUpgrader
 {
-    public function Message_myUpdater()
+    public function __construct()
     {
         parent::__construct();
         $this->_mMilestone = array(

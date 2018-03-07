@@ -50,7 +50,7 @@ class File_Archive_Reader_Cache extends File_Archive_Reader
     /**
      * $source is the reader to filter
      */
-    public function File_Archive_Reader_Cache(&$source)
+    public function __construct(&$source)
     {
         $this->source =& $source;
         $this->tmpFile = tmpfile();

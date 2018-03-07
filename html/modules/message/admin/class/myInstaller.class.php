@@ -11,9 +11,10 @@ require_once XOOPS_ROOT_PATH.'/modules/legacy/admin/class/ModuleInstaller.class.
 
 class Message_myInstaller extends Legacy_ModuleInstaller
 {
-    public function Message_myInstaller()
+    public function __construct()
     {
-        parent::Legacy_ModuleInstaller();
+//        parent::Legacy_ModuleInstaller();
+        parent::__construct();
     }
   
     public function executeInstall()

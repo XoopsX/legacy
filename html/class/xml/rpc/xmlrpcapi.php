@@ -52,7 +52,7 @@ class XoopsXmlRpcApi
 
 
 
-    public function XoopsXmlRpcApi(&$params, &$response, &$module)
+    public function __construct(&$params, &$response, &$module)
     {
         $this->params =& $params;
         $this->response =& $response;

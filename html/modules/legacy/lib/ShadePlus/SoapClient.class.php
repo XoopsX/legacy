@@ -17,9 +17,11 @@ class ShadePlus_SoapClient extends XCube_AbstractServiceClient
 {
     public $mClient = null;
     
-    public function ShadePlus_SoapClient(&$service)
+    public function __construct(&$service)
     {
-        parent::XCube_AbstractServiceClient($service);
+//        parent::XCube_AbstractServiceClient($service);
+        parent::__construct($service);
+
         $this->mClient =new soap_client($service, true);
         $this->mClient->decodeUTF8(false);
     }

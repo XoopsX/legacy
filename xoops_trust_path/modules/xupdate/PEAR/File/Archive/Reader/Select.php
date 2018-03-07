@@ -45,9 +45,11 @@ class File_Archive_Reader_Select extends File_Archive_Reader_Relay
     /**
      * $source is the reader to filter
      */
-    public function File_Archive_Reader_Select($filename, &$source)
+    public function __construct($filename, &$source)
     {
-        parent::File_Archive_Reader_Relay($source);
+//        parent::File_Archive_Reader_Relay($source);
+        parent::__construct($source);
+
         $this->filename = $filename;
     }
 

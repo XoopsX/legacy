@@ -18,7 +18,7 @@ class XCube_Utils
      * @private
      * @brief Private Constructor. In other words, it's impossible to generate an instance of this class.
      */
-    public function XCube_Utils()
+    public function __construct()
     {
     }
     

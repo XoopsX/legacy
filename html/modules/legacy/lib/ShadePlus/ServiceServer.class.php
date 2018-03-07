@@ -13,7 +13,7 @@ class ShadePlus_ServiceServer
     
     public $_mServer;
     
-    public function ShadePlus_ServiceServer(&$service)
+    public function __construct(&$service)
     {
         $this->_mService =& $service;
         $this->_mServer =new ShadeSoap_NusoapServer();

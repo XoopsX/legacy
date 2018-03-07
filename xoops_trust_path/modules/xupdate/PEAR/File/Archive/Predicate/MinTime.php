@@ -46,7 +46,7 @@ class File_Archive_Predicate_MinTime extends File_Archive_Predicate
      * @param int $minTime Unix timestamp of the minimal modification date of
      *        the files
      */
-    public function File_Archive_Predicate_MinTime($minTime)
+    public function __construct($minTime)
     {
         $this->minTime = $minTime;
     }

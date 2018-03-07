@@ -76,7 +76,7 @@ class File_Archive_Reader_Memory extends File_Archive_Reader
      *        recomputed from $memory
      * @param string $mime is the mime type of the file
      */
-    public function File_Archive_Reader_Memory(&$memory, $filename,
+    public function __construct(&$memory, $filename,
                                         $stat=array(), $mime=null)
     {
         $this->memory = &$memory;

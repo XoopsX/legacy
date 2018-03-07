@@ -503,7 +503,7 @@ class Crypt_Base
      * @param int $mode
      * @access public
      */
-    function Crypt_Base($mode = CRYPT_MODE_CBC)
+    function __construct($mode = CRYPT_MODE_CBC)
     {
         // $mode dependent settings
         switch ($mode) {

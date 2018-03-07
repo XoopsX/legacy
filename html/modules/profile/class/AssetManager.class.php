@@ -18,14 +18,14 @@ class Profile_AssetManager
     /**
      * @private
      */
-    public function Profile_AssetManager()
+    public function __construct()
     {
     }
 
     /**
      * @public
      */
-    public function &getSingleton()
+    public static function getSingleton()
     {
         static $instance;
     

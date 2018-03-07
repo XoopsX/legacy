@@ -352,7 +352,7 @@ class Text_Wiki
     *     
     */
     
-    public function Text_Wiki($rules = null)
+    public function __construct($rules = null)
     {
         if (is_array($rules)) {
             $this->rules = $rules;

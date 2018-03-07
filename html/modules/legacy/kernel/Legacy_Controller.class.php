@@ -106,9 +106,10 @@ class Legacy_Controller extends XCube_Controller
      */
     public $mLogger = null;
     
-    public function Legacy_Controller()
+    public function __construct()
     {
-        parent::XCube_Controller();
+//        parent::XCube_Controller();
+        parent::__construct();
         
         //
         // Setup member properties as member delegates.
@@ -1371,7 +1372,7 @@ class Legacy_AbstractControllerStrategy
     
     public $mStatusFlag;
     
-    public function Legacy_AbstractControllerStrategy(&$controller)
+    public function __construct(&$controller)
     {
         $this->mController =& $controller;
     }

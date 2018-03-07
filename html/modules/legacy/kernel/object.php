@@ -32,7 +32,7 @@ class XoopsSimpleObject extends AbstractXoopsObject
     public $mIsNew = true;
     public $mDirname = null;
     
-    public function XoopsSimpleObject()
+    public function __construct()
     {
     }
     

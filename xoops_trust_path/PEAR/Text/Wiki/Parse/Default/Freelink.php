@@ -54,7 +54,7 @@ class Text_Wiki_Parse_Freelink extends Text_Wiki_Parse
     * 
     */
     
-    public function Text_Wiki_Parse_Freelink(&$obj)
+    public function __construct(&$obj)
     {
         parent::Text_Wiki_Parse($obj);
         

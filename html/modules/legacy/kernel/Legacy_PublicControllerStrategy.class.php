@@ -16,9 +16,11 @@ class Legacy_PublicControllerStrategy extends Legacy_AbstractControllerStrategy
 {
     public $mStatusFlag = LEGACY_CONTROLLER_STATE_PUBLIC;
     
-    public function Legacy_PublicControllerStrategy(&$controller)
+    public function __construct(&$controller)
     {
-        parent::Legacy_AbstractControllerStrategy($controller);
+//        parent::Legacy_AbstractControllerStrategy($controller);
+        parent::__construct($controller);
+
         
         $controller->mRoot->mContext->mBaseRenderSystemName = "Legacy_RenderSystem";
         

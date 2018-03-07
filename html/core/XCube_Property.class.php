@@ -22,7 +22,7 @@ class XCube_PropertyInterface
      * @brief Constructor.
      * @param $name string - A name of this property.
      */
-    public function XCube_PropertyInterface($name)
+    public function __construct($name)
     {
     }
 
@@ -148,9 +148,11 @@ class XCube_AbstractProperty extends XCube_PropertyInterface
      * @brief Constructor.
      * @param $name string - A name of this property.
      */
-    public function XCube_AbstractProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_PropertyInterface($name);
+//        parent::XCube_PropertyInterface($name);
+        parent::__construct($name);
+
         $this->mName = $name;
     }
     
@@ -275,7 +277,7 @@ class XCube_GenericArrayProperty extends XCube_PropertyInterface
      * @param $classname string - <T>
      * @param $name string - A name of the property.
      */
-    public function XCube_GenericArrayProperty($classname, $name)
+    public function __construct($classname, $name)
     {
         $this->mPropertyClassName = $classname;
         $this->mName = $name;
@@ -440,9 +442,11 @@ class XCube_GenericArrayProperty extends XCube_PropertyInterface
  */
 class XCube_AbstractArrayProperty extends XCube_GenericArrayProperty
 {
-    public function XCube_AbstractArrayProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_GenericArrayProperty($this->mPropertyClassName, $name);
+//        parent::XCube_GenericArrayProperty($this->mPropertyClassName, $name);
+        parent::__construct($this->mPropertyClassName, $name);
+
     }
 }
 
@@ -465,9 +469,11 @@ class XCube_BoolProperty extends XCube_AbstractProperty
  */
 class XCube_BoolArrayProperty extends XCube_GenericArrayProperty
 {
-    public function XCube_BoolArrayProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_GenericArrayProperty("XCube_BoolProperty", $name);
+//        parent::XCube_GenericArrayProperty("XCube_BoolProperty", $name);
+        parent::__construct("XCube_BoolProperty", $name);
+
     }
 }
 
@@ -490,9 +496,10 @@ class XCube_IntProperty extends XCube_AbstractProperty
  */
 class XCube_IntArrayProperty extends XCube_GenericArrayProperty
 {
-    public function XCube_IntArrayProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_GenericArrayProperty("XCube_IntProperty", $name);
+//        parent::XCube_GenericArrayProperty("XCube_IntProperty", $name);
+        parent::__construct("XCube_IntProperty", $name);
     }
 }
 
@@ -515,9 +522,10 @@ class XCube_FloatProperty extends XCube_AbstractProperty
  */
 class XCube_FloatArrayProperty extends XCube_GenericArrayProperty
 {
-    public function XCube_FloatArrayProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_GenericArrayProperty("XCube_FloatProperty", $name);
+//        parent::XCube_GenericArrayProperty("XCube_FloatProperty", $name);
+        parent::__construct("XCube_FloatProperty", $name);
     }
 }
 
@@ -552,9 +560,10 @@ class XCube_StringProperty extends XCube_AbstractProperty
  */
 class XCube_StringArrayProperty extends XCube_GenericArrayProperty
 {
-    public function XCube_StringArrayProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_GenericArrayProperty("XCube_StringProperty", $name);
+//        parent::XCube_GenericArrayProperty("XCube_StringProperty", $name);
+        parent::__construct("XCube_StringProperty", $name);
     }
 }
 
@@ -591,9 +600,10 @@ class XCube_TextProperty extends XCube_AbstractProperty
  */
 class XCube_TextArrayProperty extends XCube_GenericArrayProperty
 {
-    public function XCube_TextArrayProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_GenericArrayProperty("XCube_TextProperty", $name);
+//        parent::XCube_GenericArrayProperty("XCube_TextProperty", $name);
+        parent::__construct("XCube_TextProperty", $name);
     }
 }
 
@@ -612,9 +622,10 @@ class XCube_FileProperty extends XCube_AbstractProperty
      */
     public $mIndex = null;
     
-    public function XCube_FileProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_AbstractProperty($name);
+//        parent::XCube_AbstractProperty($name);
+        parent::__construct($name);
         $this->mValue = new XCube_FormFile($name);
     }
     
@@ -667,9 +678,10 @@ class XCube_FileProperty extends XCube_AbstractProperty
  */
 class XCube_FileArrayProperty extends XCube_GenericArrayProperty
 {
-    public function XCube_FileArrayProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_GenericArrayProperty("XCube_FileProperty", $name);
+//        parent::XCube_GenericArrayProperty("XCube_FileProperty", $name);
+        parent::__construct("XCube_FileProperty", $name);
     }
     
     public function hasFetchControl()
@@ -698,9 +710,11 @@ class XCube_FileArrayProperty extends XCube_GenericArrayProperty
  */
 class XCube_ImageFileProperty extends XCube_FileProperty
 {
-    public function XCube_ImageFileProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_AbstractProperty($name);
+//        parent::XCube_AbstractProperty($name);
+        parent::__construct($name);
+
         $this->mValue = new XCube_FormImageFile($name);
     }
 }
@@ -712,8 +726,9 @@ class XCube_ImageFileProperty extends XCube_FileProperty
  */
 class XCube_ImageFileArrayProperty extends XCube_FileArrayProperty
 {
-    public function XCube_ImageFileArrayProperty($name)
+    public function __construct($name)
     {
-        parent::XCube_GenericArrayProperty("XCube_ImageFileProperty", $name);
+//        parent::XCube_GenericArrayProperty("XCube_ImageFileProperty", $name);
+        parent::__construct("XCube_ImageFileProperty", $name);
     }
 }

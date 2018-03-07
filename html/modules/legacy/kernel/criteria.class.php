@@ -68,7 +68,7 @@ class Legacy_Criteria
      */
     public $mChildlen = array();
     
-    public function Legacy_Criteria($typeInfoArr)
+    public function __construct($typeInfoArr)
     {
         $this->mTypeInfoArr = $typeInfoArr;
     }

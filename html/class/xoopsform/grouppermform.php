@@ -72,9 +72,11 @@ class XoopsGroupPermForm extends XoopsForm
     /**
      * Constructor
      */
-    public function XoopsGroupPermForm($title, $modid, $permname, $permdesc, $url = "")
+    public function __construct($title, $modid, $permname, $permdesc, $url = "")
     {
-        $this->XoopsForm($title, 'groupperm_form', XOOPS_URL . '/modules/legacy/include/groupperm.php', 'post');
+//        $this->XoopsForm($title, 'groupperm_form', XOOPS_URL . '/modules/legacy/include/groupperm.php', 'post');
+        parent::__construct($title, 'groupperm_form', XOOPS_URL . '/modules/legacy/include/groupperm.php', 'post');
+
         $this->_modid = intval($modid);
         $this->_permName = $permname;
         $this->_permDesc = $permdesc;
@@ -200,7 +202,7 @@ class XoopsGroupFormCheckBox extends XoopsFormElement
     /**
      * Constructor
      */
-    public function XoopsGroupFormCheckBox($caption, $name, $groupId, $values = null)
+    public function __construct($caption, $name, $groupId, $values = null)
     {
         $this->setCaption($caption);
         $this->setName($name);

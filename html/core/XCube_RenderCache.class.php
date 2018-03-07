@@ -13,7 +13,7 @@ class XCube_RenderCache
     public $mCacheId = null;
     public $mResourceName = null;
     
-    public function XCube_RenderCache()
+    public function __construct()
     {
     }
 

@@ -6,7 +6,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 class LegacyRenderModuletplObject extends XoopsSimpleObject
 {
-    public function LegacyRenderModuletplObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {
@@ -25,7 +25,7 @@ class LegacyRenderTplsetObject extends XoopsSimpleObject
 {
     public $mModuleTemplates = array();
     
-    public function LegacyRenderTplsetObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {
@@ -96,7 +96,7 @@ class LegacyRenderTplsetHandler extends XoopsObjectGenericHandler
         return true;    ///< TODO
     }
 
-    public function delete(&$obj, $force)
+    public function delete(&$obj, $force = false)
     {
         $handler =& xoops_getmodulehandler('tplfile', 'legacyRender');
         $handler->deleteAll(new Criteria('tpl_tplset', $obj->get('tplset_name')));

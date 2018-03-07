@@ -116,7 +116,7 @@ class Text_Wiki_Parse
     * 
     */
     
-    public function Text_Wiki_Parse(&$obj)
+    public function __construct(&$obj)
     {
         // set the reference to the calling Text_Wiki object;
         // this allows us access to the shared source text, token

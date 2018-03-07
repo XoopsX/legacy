@@ -44,7 +44,7 @@ class File_Archive_Predicate_MIME extends File_Archive_Predicate
     /**
      * @param $extensions array or comma separated string of allowed extensions
      */
-    public function File_Archive_Predicate_MIME($mimes)
+    public function __construct($mimes)
     {
         if (is_string($mimes)) {
             $this->mimes = explode(",", $mimes);

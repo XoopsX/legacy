@@ -28,9 +28,11 @@ class XoopsObjectGenericHandler extends XoopsObjectHandler
      */
     public $_mDummyObj = null;
 
-    public function XoopsObjectGenericHandler(&$db)
+    public function __construct(&$db)
     {
-        parent::XoopsObjectHandler($db);
+//        parent::XoopsObjectHandler($db);
+        parent::__construct($db);
+
         $tableArr = explode('_', $this->mTable);
         $this->mDirname = array_shift($tableArr);
         $this->mDataname = implode('_', $tableArr);

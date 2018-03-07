@@ -67,7 +67,7 @@ class XoopsToken
      * @param   $name   this token's name string.
      * @param   $timeout    effective time(if $timeout equal 0, this token will become unlimited)
      */
-    public function XoopsToken($name, $timeout = XOOPS_TOKEN_TIMEOUT)
+    public function __construct($name, $timeout = XOOPS_TOKEN_TIMEOUT)
     {
         $this->_name_ = $name;
 

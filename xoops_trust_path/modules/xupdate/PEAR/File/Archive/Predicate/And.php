@@ -56,7 +56,7 @@ class File_Archive_Predicate_And extends File_Archive_Predicate
      * Example:
      *   new File_Archive_Predicate_And($pred1, $pred2, $pred3)
      */
-    public function File_Archive_Predicate_And()
+    public function __construct()
     {
         $this->preds = func_get_args();
     }

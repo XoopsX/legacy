@@ -6,7 +6,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 class UserAvatar_user_linkObject extends XoopsSimpleObject
 {
-    public function UserAvatar_user_linkObject()
+    public function __construct()
     {
         $this->initVar('avatar_id', XOBJ_DTYPE_INT, '0', true);
         $this->initVar('user_id', XOBJ_DTYPE_INT, '0', true);

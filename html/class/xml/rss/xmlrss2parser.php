@@ -43,9 +43,10 @@ class XoopsXmlRss2Parser extends SaxParser
     public $_imageData = array();
     public $_items = array();
 
-    public function XoopsXmlRss2Parser(&$input)
+    public function __construct(&$input)
     {
-        $this->SaxParser($input);
+        parent::__construct($input);
+
         $this->useUtfEncoding();
         $this->addTagHandler(new RssChannelHandler());
         $this->addTagHandler(new RssTitleHandler());
@@ -144,7 +145,7 @@ class XoopsXmlRss2Parser extends SaxParser
 class RssChannelHandler extends XmlTagHandler
 {
 
-    public function RssChannelHandler()
+    public function __construct()
     {
     }
 
@@ -157,7 +158,7 @@ class RssChannelHandler extends XmlTagHandler
 class RssTitleHandler extends XmlTagHandler
 {
 
-    public function RssTitleHandler()
+    public function __construct()
     {
     }
 
@@ -188,7 +189,7 @@ class RssTitleHandler extends XmlTagHandler
 class RssLinkHandler extends XmlTagHandler
 {
 
-    public function RssLinkHandler()
+    public function __construct()
     {
     }
 
@@ -219,7 +220,7 @@ class RssLinkHandler extends XmlTagHandler
 class RssDescriptionHandler extends XmlTagHandler
 {
 
-    public function RssDescriptionHandler()
+    public function __construct()
     {
     }
 
@@ -250,7 +251,7 @@ class RssDescriptionHandler extends XmlTagHandler
 class RssGeneratorHandler extends XmlTagHandler
 {
 
-    public function RssGeneratorHandler()
+    public function __construct()
     {
     }
 
@@ -274,7 +275,7 @@ class RssGeneratorHandler extends XmlTagHandler
 class RssCopyrightHandler extends XmlTagHandler
 {
 
-    public function RssCopyrightHandler()
+    public function __construct()
     {
     }
 
@@ -298,7 +299,7 @@ class RssCopyrightHandler extends XmlTagHandler
 class RssNameHandler extends XmlTagHandler
 {
 
-    public function RssNameHandler()
+    public function __construct()
     {
     }
 
@@ -322,7 +323,7 @@ class RssNameHandler extends XmlTagHandler
 class RssManagingEditorHandler extends XmlTagHandler
 {
 
-    public function RssManagingEditorHandler()
+    public function __construct()
     {
     }
 
@@ -346,7 +347,7 @@ class RssManagingEditorHandler extends XmlTagHandler
 class RssLanguageHandler extends XmlTagHandler
 {
 
-    public function RssLanguageHandler()
+    public function __construct()
     {
     }
 
@@ -370,7 +371,7 @@ class RssLanguageHandler extends XmlTagHandler
 class RssWebMasterHandler extends XmlTagHandler
 {
 
-    public function RssWebMasterHandler()
+    public function __construct()
     {
     }
 
@@ -394,7 +395,7 @@ class RssWebMasterHandler extends XmlTagHandler
 class RssDocsHandler extends XmlTagHandler
 {
 
-    public function RssDocsHandler()
+    public function __construct()
     {
     }
 
@@ -418,7 +419,7 @@ class RssDocsHandler extends XmlTagHandler
 class RssTtlHandler extends XmlTagHandler
 {
 
-    public function RssTtlHandler()
+    public function __construct()
     {
     }
 
@@ -465,7 +466,7 @@ class RssTextInputHandler extends XmlTagHandler
 class RssLastBuildDateHandler extends XmlTagHandler
 {
 
-    public function RssLastBuildDateHandler()
+    public function __construct()
     {
     }
 
@@ -489,7 +490,7 @@ class RssLastBuildDateHandler extends XmlTagHandler
 class RssImageHandler extends XmlTagHandler
 {
 
-    public function RssImageHandler()
+    public function __construct()
     {
     }
 
@@ -502,7 +503,7 @@ class RssImageHandler extends XmlTagHandler
 class RssUrlHandler extends XmlTagHandler
 {
 
-    public function RssUrlHandler()
+    public function __construct()
     {
     }
 
@@ -522,7 +523,7 @@ class RssUrlHandler extends XmlTagHandler
 class RssWidthHandler extends XmlTagHandler
 {
 
-    public function RssWidthHandler()
+    public function __construct()
     {
     }
 
@@ -542,7 +543,7 @@ class RssWidthHandler extends XmlTagHandler
 class RssHeightHandler extends XmlTagHandler
 {
 
-    public function RssHeightHandler()
+    public function __construct()
     {
     }
 
@@ -562,7 +563,7 @@ class RssHeightHandler extends XmlTagHandler
 class RssItemHandler extends XmlTagHandler
 {
 
-    public function RssItemHandler()
+    public function __construct()
     {
     }
 
@@ -585,7 +586,7 @@ class RssItemHandler extends XmlTagHandler
 class RssCategoryHandler extends XmlTagHandler
 {
 
-    public function RssCategoryHandler()
+    public function __construct()
     {
     }
 
@@ -611,7 +612,7 @@ class RssCategoryHandler extends XmlTagHandler
 class RssCommentsHandler extends XmlTagHandler
 {
 
-    public function RssCommentsHandler()
+    public function __construct()
     {
     }
 
@@ -631,7 +632,7 @@ class RssCommentsHandler extends XmlTagHandler
 class RssPubDateHandler extends XmlTagHandler
 {
 
-    public function RssPubDateHandler()
+    public function __construct()
     {
     }
 
@@ -658,7 +659,7 @@ class RssPubDateHandler extends XmlTagHandler
 class RssGuidHandler extends XmlTagHandler
 {
 
-    public function RssGuidHandler()
+    public function __construct()
     {
     }
 
@@ -698,7 +699,7 @@ class RssAuthorHandler extends XmlTagHandler
 class RssSourceHandler extends XmlTagHandler
 {
 
-    public function RssSourceHandler()
+    public function __construct()
     {
     }
 

@@ -6,7 +6,7 @@ class AltsysBreadcrumbs
 
     public $paths = array() ;
 
-    public function AltsysBreadcrumbs()
+    public function __construct()
     {
     }
 //HACK by domifara for php5.3+

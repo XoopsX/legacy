@@ -27,7 +27,7 @@ class LegacyRender_ActionFrame
      */
     public $mCreateAction = null;
 
-    public function LegacyRender_ActionFrame($admin)
+    public function __construct($admin)
     {
         $this->mAdminFlag = $admin;
         $this->mCreateAction =new XCube_Delegate();
@@ -144,7 +144,7 @@ class LegacyRender_Action
      */
     public $_mAdminFlag = false;
     
-    public function LegacyRender_Action($adminFlag = false)
+    public function __construct($adminFlag = false)
     {
         $this->_mAdminFlag = $adminFlag;
     }

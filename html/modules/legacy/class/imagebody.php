@@ -14,7 +14,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 class LegacyImagebodyObject extends XoopsSimpleObject
 {
-    public function LegacyImagebodyObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

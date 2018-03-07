@@ -16,7 +16,7 @@ require_once XOOPS_ROOT_PATH . '/include/comment_constants.php';
 
 class LegacyCommentstatusObject extends XoopsSimpleObject
 {
-    public function LegacyCommentstatusObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {
@@ -33,7 +33,7 @@ class LegacyCommentstatusHandler extends XoopsObjectHandler
 {
     public $_mResults = array();
     
-    public function LegacyCommentstatusHandler(&$db)
+    public function __construct(&$db)
     {
         $root =& XCube_Root::getSingleton();
         $language = $root->mContext->getXoopsConfig('language');

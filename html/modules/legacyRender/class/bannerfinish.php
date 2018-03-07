@@ -9,7 +9,7 @@ class LegacyRenderBannerfinishObject extends XoopsSimpleObject
     public $mClient = null;
     public $_mClientLoadedFlag = false;
 
-    public function LegacyRenderBannerfinishObject()
+    public function __construct()
     {
         $this->initVar('bid', XOBJ_DTYPE_INT, '', false);
         $this->initVar('cid', XOBJ_DTYPE_INT, '0', true);

@@ -98,7 +98,7 @@ class Text_Wiki_Parse_Url extends Text_Wiki_Parse
     * 
     */
     
-    public function Text_Wiki_Parse_Url(&$obj)
+    public function __construct(&$obj)
     {
         parent::Text_Wiki_Parse($obj);
         

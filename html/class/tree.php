@@ -59,7 +59,7 @@ class XoopsObjectTree
      * @param   string     $parentId   field name of parent object ID
      * @param   string     $rootId     field name of root object ID
      **/
-    public function XoopsObjectTree(&$objectArr, $myId, $parentId, $rootId = null)
+    public function __construct(&$objectArr, $myId, $parentId, $rootId = null)
     {
         $this->_objects =& $objectArr;
         $this->_myId = $myId;

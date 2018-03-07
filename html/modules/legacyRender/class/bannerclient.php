@@ -21,7 +21,7 @@ class LegacyRenderBannerclientObject extends XoopsSimpleObject
     public $mFinishBannerCount = null;
     public $_mFinishBannerCountLoadedFlag = false;
 
-    public function LegacyRenderBannerclientObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

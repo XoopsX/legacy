@@ -127,7 +127,8 @@ class Legacy_RenderSystem extends XCube_RenderSystem
     
     public function __construct()
     {
-        parent::XCube_RenderSystem();
+//        parent::XCube_RenderSystem();
+        parent::__construct();
         $this->mSetupXoopsTpl =new XCube_Delegate();
         $this->mSetupXoopsTpl->register('Legacy_RenderSystem.SetupXoopsTpl');
 

@@ -9,7 +9,7 @@ class LegacyRenderThemeObject extends XoopsSimpleObject
     public $mPackage = array();
     public $mActiveResource = true;
     
-    public function LegacyRenderThemeObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

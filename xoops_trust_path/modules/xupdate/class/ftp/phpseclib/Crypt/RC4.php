@@ -161,9 +161,11 @@ class Crypt_RC4 extends Crypt_Base
      * @return Crypt_RC4
      * @access public
      */
-    function Crypt_RC4()
+    function __construct()
     {
-        parent::Crypt_Base(CRYPT_MODE_STREAM);
+//        parent::Crypt_Base(CRYPT_MODE_STREAM);
+        parent::__construct(CRYPT_MODE_STREAM);
+
     }
 
     /**

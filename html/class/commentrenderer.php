@@ -58,7 +58,7 @@ class XoopsCommentRenderer
      * @param   boolean $use_icons
      * @param   boolean $do_iconcheck
      **/
-    public function XoopsCommentRenderer(&$tpl, $use_icons = true, $do_iconcheck = false)
+    public function __construct(&$tpl, $use_icons = true, $do_iconcheck = false)
     {
         $this->_tpl =& $tpl;
         $this->_useIcons = $use_icons;

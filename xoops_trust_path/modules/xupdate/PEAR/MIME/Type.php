@@ -115,7 +115,7 @@ class MIME_Type
      *
      * @return void
      */
-    public function MIME_Type($type = false)
+    public function __construct($type = false)
     {
         if ($type) {
             $this->parse($type);

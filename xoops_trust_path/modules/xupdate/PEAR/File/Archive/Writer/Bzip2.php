@@ -63,7 +63,7 @@ class File_Archive_Writer_Bzip2 extends File_Archive_Writer
      * @param bool $autoClose Indicate if the inner writer must be closed when
      *        closing this
      */
-    public function File_Archive_Writer_Bzip2($filename, &$innerWriter,
+    public function __construct($filename, &$innerWriter,
                                        $stat = array(), $autoClose = true)
     {
         $this->innerWriter =& $innerWriter;

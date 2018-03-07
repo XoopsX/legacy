@@ -16,9 +16,11 @@ class User_UserViewAction extends User_AbstractViewAction
      */
     public $mGetUserPosts = null;
     
-    public function User_UserViewAction()
+    public function __construct()
     {
-        parent::User_AbstractViewAction();
+//        parent::User_AbstractViewAction();
+        parent::__construct();
+
         $this->mGetUserPosts =new XCube_Delegate();
         $this->mGetUserPosts->register('User_UserViewAction.GetUserPosts');
     }

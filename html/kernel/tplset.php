@@ -41,7 +41,8 @@ class XoopsTplset extends XoopsObject
             $this->vars = $initVars;
             return;
         }
-        $this->XoopsObject();
+        //        $this->XoopsObject();
+        parent::__construct();
         $this->initVar('tplset_id', XOBJ_DTYPE_INT, null, false);
         $this->initVar('tplset_name', XOBJ_DTYPE_OTHER, null, false);
         $this->initVar('tplset_desc', XOBJ_DTYPE_TXTBOX, null, false, 255);

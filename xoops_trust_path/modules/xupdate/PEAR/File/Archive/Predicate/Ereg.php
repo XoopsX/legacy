@@ -43,7 +43,7 @@ class File_Archive_Predicate_Ereg extends File_Archive_Predicate
     /**
      * @param string $ereg is the regular expression
      */
-    public function File_Archive_Predicate_Ereg($ereg)
+    public function __construct($ereg)
     {
         $this->ereg = $ereg;
     }

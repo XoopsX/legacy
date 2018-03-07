@@ -36,7 +36,7 @@ class Profile_Admin_DefinitionsListAction extends Profile_AbstractListAction
     /**
      * @protected
      */
-    public function _getBaseUrl()
+    public function &_getBaseUrl()
     {
         return "./index.php?action=DefinitionsList";
     }

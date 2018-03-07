@@ -173,7 +173,7 @@ class XoopsObject extends AbstractXoopsObject
     * normally, this is called from child classes only
     * @access public
     */
-    public function XoopsObject()
+    public function __construct()
     {
     }
 
@@ -705,7 +705,7 @@ class XoopsObjectHandler
      * @param object $db reference to the {@link XoopsDatabase} object
      * @access protected
      */
-    public function XoopsObjectHandler(&$db)
+    public function __construct(&$db)
     {
         $this->db =& $db;
     }

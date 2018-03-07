@@ -15,9 +15,11 @@ class Qrcode_image extends Qrcode
     public $module_size;
     public $quiet_zone;
 
-    public function Qrcode_image()
+    public function __construct()
     {
         $this->Qrcode();
+        parent::__construct();
+
         $this->module_size=4;
         $this->quiet_zone=4;
     }

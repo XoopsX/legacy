@@ -14,7 +14,7 @@ class LegacyRenderTplfileObject extends XoopsSimpleObject
     
     public $mOverride = null;
     
-    public function LegacyRenderTplfileObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

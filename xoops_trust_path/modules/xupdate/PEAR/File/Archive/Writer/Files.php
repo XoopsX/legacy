@@ -45,7 +45,7 @@ class File_Archive_Writer_Files extends File_Archive_Writer
     public $stat = array();
     public $filename;
 
-    public function File_Archive_Writer_Files($base = '')
+    public function __construct($base = '')
     {
         if ($base === null || $base == '') {
             $this->basePath = '';

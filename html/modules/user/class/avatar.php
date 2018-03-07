@@ -6,7 +6,7 @@ if (!defined('XOOPS_ROOT_PATH')) {
 
 class UserAvatarObject extends XoopsSimpleObject
 {
-    public function UserAvatarObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

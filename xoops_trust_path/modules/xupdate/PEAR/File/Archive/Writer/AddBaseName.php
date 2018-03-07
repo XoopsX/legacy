@@ -39,7 +39,7 @@ class File_Archive_Writer_AddBaseName
     public $writer;
     public $baseName;
 
-    public function File_Archive_Writer_AddBaseName($baseName, &$writer)
+    public function __construct($baseName, &$writer)
     {
         if (substr($baseName, -1) == '/') {
             $this->baseName = $baseName;

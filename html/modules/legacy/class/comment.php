@@ -18,7 +18,7 @@ class LegacyCommentObject extends XoopsSimpleObject
     public $mModule = null;
     public $mStatus = null;
     
-    public function LegacyCommentObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {
@@ -99,10 +99,11 @@ class LegacyCommentHandler extends XoopsObjectGenericHandler
      */
     public $mDeleteSuccess;
     
-    public function LegacyCommentHandler(&$db)
+    public function __construct(&$db)
     {
-        parent::XoopsObjectGenericHandler($db);
-        
+//        parent::XoopsObjectGenericHandler($db);
+        parent::__construct($db);
+
         $this->mUpdateSuccess =new XCube_Delegate();
         $this->mDeleteSuccess =new XCube_Delegate();
     }

@@ -36,7 +36,7 @@ include_once XOOPS_ROOT_PATH.'/class/class.zipfile.php';
 
 class XoopsZipDownloader extends XoopsDownloader
 {
-    public function XoopsZipDownloader($ext = '.zip', $mimyType = 'application/x-zip')
+    public function __construct($ext = '.zip', $mimyType = 'application/x-zip')
     {
         $this->archiver = new zipfile();
         $this->ext      = trim($ext);

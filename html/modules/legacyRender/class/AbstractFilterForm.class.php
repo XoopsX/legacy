@@ -13,7 +13,7 @@ class LegacyRender_AbstractFilterForm
     
     public $_mHandler = null;
     
-    public function LegacyRender_AbstractFilterForm(&$navi, &$handler)
+    public function __construct(&$navi, &$handler)
     {
         $this->mNavi =& $navi;
         $this->_mHandler =& $handler;

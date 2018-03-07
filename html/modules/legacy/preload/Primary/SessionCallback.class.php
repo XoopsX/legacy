@@ -15,7 +15,10 @@ if (!defined('XOOPS_ROOT_PATH')) {
 // registration `session_write_close()` on shutdown procedure final.
 // For the environment in which the object before writing session is destroyed when PHP execution end.
 // ex. APC, memcached etc...
-ob_start(create_function('', '(session_id() && session_write_close());return false;'));
+
+//ob_start(create_function('', '(session_id() && session_write_close());return false;'));
+ob_start(       function()            {(session_id() && session_write_close());return false;});
+
 
 class Legacy_SessionCallback extends XCube_ActionFilter
 {

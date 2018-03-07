@@ -48,9 +48,11 @@ class File_Archive_Reader_ChangeName extends File_Archive_Reader_Relay
      *
      * @param File_Archive_Reader &$source The archive reader to relay
      */
-    public function File_Archive_Reader_ChangeName(&$source)
+    public function __construct(&$source)
     {
-        parent::File_Archive_Reader_Relay($source);
+//        parent::File_Archive_Reader_Relay($source);
+        parent::__construct($source);
+
     }
 
     /**

@@ -38,7 +38,7 @@ class XCube_LanguageManager
      */
     public $mLocaleName;
     
-    public function XCube_LanguageManager()
+    public function __construct()
     {
         $this->mLanguageName = $this->getFallbackLanguage();
         $this->mLocaleName = $this->getFallbackLocale();

@@ -19,7 +19,7 @@ class LegacyImageObject extends XoopsSimpleObject
     public $mImageBody = null;
     public $_mImageBodyLoadedFlag = false;
 
-    public function LegacyImageObject()
+    public function __construct()
     {
         static $initVars;
         if (isset($initVars)) {

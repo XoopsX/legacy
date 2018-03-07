@@ -61,10 +61,12 @@ class File_Archive_Reader_Directory extends File_Archive_Reader_Relay
      * of $maxRecurs. In particular, if $maxRecurs == 0, the subdirectories
      * won't be read.
      */
-    public function File_Archive_Reader_Directory($directory, $symbolic='',
+    public function __construct($directory, $symbolic='',
                                            $maxRecurs=-1)
     {
-        parent::File_Archive_Reader_Relay($tmp = null);
+//        parent::File_Archive_Reader_Relay($tmp = null);
+        parent::__construct($tmp = null);
+
         $this->directory = empty($directory) ? '.' : $directory;
         $this->symbolic = $this->getStandardURL($symbolic);
         $this->maxRecurs = $maxRecurs;

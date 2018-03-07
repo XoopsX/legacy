@@ -44,7 +44,7 @@ class File_Archive_Reader_Concat extends File_Archive_Reader
     public $opened = false;
     public $filePos = 0;
 
-    public function File_Archive_Reader_Concat(&$source, $filename,
+    public function __construct(&$source, $filename,
                                         $stat=array(), $mime=null)
     {
         $this->source =& $source;

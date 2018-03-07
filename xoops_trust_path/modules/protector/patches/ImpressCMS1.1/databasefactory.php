@@ -30,7 +30,7 @@ class XoopsDatabaseFactory
      *
      * Makes nothing.
      */
-    public function XoopsDatabaseFactory()
+    public function __construct()
     {
     }
 

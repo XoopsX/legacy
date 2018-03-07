@@ -34,7 +34,7 @@ class XoopsXmlRpcDocument
 
     public $_tags = array();
 
-    public function XoopsXmlRpcDocument()
+    public function __construct()
     {
     }
 
@@ -70,7 +70,7 @@ class XoopsXmlRpcRequest extends XoopsXmlRpcDocument
 
     public $methodName;
 
-    public function XoopsXmlRpcRequest($methodName)
+    public function __construct($methodName)
     {
         $this->methodName = trim($methodName);
     }
@@ -91,7 +91,7 @@ class XoopsXmlRpcTag
 
     public $_fault = false;
 
-    public function XoopsXmlRpcTag()
+    public function __construct()
     {
     }
 
@@ -122,7 +122,7 @@ class XoopsXmlRpcFault extends XoopsXmlRpcTag
     public $_code;
     public $_extra;
 
-    public function XoopsXmlRpcFault($code, $extra = null)
+    public function __construct($code, $extra = null)
     {
         $this->setFault(true);
         $this->_code = intval($code);
@@ -179,7 +179,7 @@ class XoopsXmlRpcInt extends XoopsXmlRpcTag
 
     public $_value;
 
-    public function XoopsXmlRpcInt($value)
+    public function __construct($value)
     {
         $this->_value = intval($value);
     }
@@ -195,7 +195,7 @@ class XoopsXmlRpcDouble extends XoopsXmlRpcTag
 
     public $_value;
 
-    public function XoopsXmlRpcDouble($value)
+    public function __construct($value)
     {
         $this->_value = (float)$value;
     }
@@ -211,7 +211,7 @@ class XoopsXmlRpcBoolean extends XoopsXmlRpcTag
 
     public $_value;
 
-    public function XoopsXmlRpcBoolean($value)
+    public function __construct($value)
     {
         $this->_value = (!empty($value) && $value != false) ? 1 : 0;
     }
@@ -227,7 +227,7 @@ class XoopsXmlRpcString extends XoopsXmlRpcTag
 
     public $_value;
 
-    public function XoopsXmlRpcString($value)
+    public function __construct($value)
     {
         $this->_value = strval($value);
     }
@@ -243,7 +243,7 @@ class XoopsXmlRpcDatetime extends XoopsXmlRpcTag
 
     public $_value;
 
-    public function XoopsXmlRpcDatetime($value)
+    public function __construct($value)
     {
         if (!is_numeric($value)) {
             $this->_value = strtotime($value);
@@ -263,7 +263,7 @@ class XoopsXmlRpcBase64 extends XoopsXmlRpcTag
 
     public $_value;
 
-    public function XoopsXmlRpcBase64($value)
+    public function __construct($value)
     {
         $this->_value = base64_encode($value);
     }
@@ -279,7 +279,7 @@ class XoopsXmlRpcArray extends XoopsXmlRpcTag
 
     public $_tags = array();
 
-    public function XoopsXmlRpcArray()
+    public function __construct()
     {
     }
 
@@ -305,7 +305,7 @@ class XoopsXmlRpcStruct extends XoopsXmlRpcTag
 
     public $_tags = array();
 
-    public function XoopsXmlRpcStruct()
+    public function __construct()
     {
     }
 

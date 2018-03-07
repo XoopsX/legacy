@@ -179,7 +179,7 @@ class File_ANSI
      * @return File_ANSI
      * @access public
      */
-    function File_ANSI()
+    function __construct()
     {
         $attr_cell = new stdClass();
         $attr_cell->bold = false;

@@ -29,7 +29,7 @@ class User_UserRegistMailDirector
     
     public $mUserConfig;
 
-    public function User_UserRegistMailDirector(&$builder, &$user, $xoopsConfig, $userConfig)
+    public function __construct(&$builder, &$user, $xoopsConfig, $userConfig)
     {
         $this->mBuilder =& $builder;
         
@@ -63,7 +63,7 @@ class User_RegistUserActivateMailBuilder
 {
     public $mMailer;
     
-    public function User_RegistUserActivateMailBuilder()
+    public function __construct()
     {
         $this->mMailer =& getMailer();
         $this->mMailer->useMail();

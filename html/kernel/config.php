@@ -89,7 +89,7 @@ class XoopsConfigHandler
      * 
      * @param	object  &$db    reference to database object
      */
-    public function XoopsConfigHandler(&$db)
+    public function __construct(&$db)
     {
         $this->_cHandler =new XoopsConfigItemHandler($db);
         $this->_oHandler =new XoopsConfigOptionHandler($db);

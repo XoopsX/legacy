@@ -113,7 +113,7 @@ class tar
     /**
      * Class Constructor -- Does nothing...
      */
-    public function tar()
+    public function __construct()
     {
         return true;
     }

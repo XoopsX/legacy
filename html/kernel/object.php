@@ -502,11 +502,11 @@ class XoopsObject extends AbstractXoopsObject
                 case XOBJ_DTYPE_TXTBOX:
                     if ($v['required'] && $cleanv != '0' && $cleanv == '') {
                         $this->setErrors("$k is required.");
-                        continue;
+                        break;
                     }
                     if (isset($v['maxlength']) && strlen($cleanv) > (int)$v['maxlength']) {
                         $this->setErrors("$k must be shorter than ".(int)$v['maxlength']." characters.");
-                        continue;
+                        break;
                     }
                     if (!$v['not_gpc']) {
                         $cleanv = $ts->stripSlashesGPC($ts->censorString($cleanv));
@@ -517,7 +517,7 @@ class XoopsObject extends AbstractXoopsObject
                 case XOBJ_DTYPE_TXTAREA:
                     if ($v['required'] && $cleanv != '0' && $cleanv == '') {
                         $this->setErrors("$k is required.");
-                        continue;
+                        break;
                     }
                     if (!$v['not_gpc']) {
                         $cleanv = $ts->stripSlashesGPC($ts->censorString($cleanv));
@@ -548,11 +548,11 @@ class XoopsObject extends AbstractXoopsObject
                 case XOBJ_DTYPE_EMAIL:
                     if ($v['required'] && $cleanv == '') {
                         $this->setErrors("$k is required.");
-                        continue;
+                        break;
                     }
                     if ($cleanv != '' && !preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+([\.][a-z0-9-]+)+$/i", $cleanv)) {
                         $this->setErrors("Invalid Email");
-                        continue;
+                        break;
                     }
                     if (!$v['not_gpc']) {
                         $cleanv = $ts->stripSlashesGPC($cleanv);
@@ -561,7 +561,7 @@ class XoopsObject extends AbstractXoopsObject
                 case XOBJ_DTYPE_URL:
                     if ($v['required'] && $cleanv == '') {
                         $this->setErrors("$k is required.");
-                        continue;
+                        break;
                     }
                     if ($cleanv != '' && !preg_match("/^http[s]*:\/\//i", $cleanv)) {
                         $cleanv = 'http://' . $cleanv;

@@ -48,7 +48,26 @@ set T="../xoops_trust_path";curl xoopsx.github.io/installer/install.sh|sed "s#<T
 
 ***
 
-##Legacy
+# Legacy
+
+# ⚠️ Unmaintained repository !
+
+# 🆕 Development moved to XCL
+
+https://github.com/xoopscube/xcl
+
+## XOOPSCube development branch : 2.3
+
+2019-01-29 Branch 2.3 updated to PHP7
+
+https://github.com/xoopscube/xcl/tree/develop
+
+XCL UI prototype 
+
+https://xoopscube.github.io/
+
+TOC
+====
 
 * [About](#about)
 * [License](#license)
@@ -81,12 +100,12 @@ About
 License
 ====
 
-###XOOPS Cube  
+### XOOPS Cube  
 
 XOOPS Cube was started from scratch and the XOOPS Cube Core source code is released under the BSD licence.
 
  
-###XOOPS Cube Legacy  
+### XOOPS Cube Legacy  
 
 XOOPS Cube Legacy source code which is one of base modules to ensure compatibility with old versions of Xoops 2 is released under a GPL licence.
 
@@ -129,11 +148,11 @@ Language</th>
 </tr>
 </table>
 
-###Software
+### Software
 
 Useful Wikipedia articles with tables comparing general and technical information of Proprietary software, Free and open-source software.  
 
-<img src="http://xoopscube.org/uploads/fckeditor/server_database.png"> <a href="http://en.wikipedia.org/wiki/List_of_AMP_packages"> Local Test Server</a> : List of Apache窶溺ySQL窶撤HP packages  
+<img src="http://xoopscube.org/uploads/fckeditor/server_database.png"> <a href="http://en.wikipedia.org/wiki/List_of_AMP_packages"> Local Test Server</a> : List of Apache–MySQL–PHP packages  
 <img src="http://xoopscube.org/uploads/fckeditor/script_edit.png"> <a href="http://en.wikipedia.org/wiki/Source_code_editor"> Source Code Editor</a> : Some well-known source code editors  
 <img src="http://xoopscube.org/uploads/fckeditor/picture_edit.png"> <a href="http://en.wikipedia.org/wiki/Comparison_of_raster_graphics_editors"> Graphics Editor</a> : Comparison of raster graphics editors  
 <img src="http://xoopscube.org/uploads/fckeditor/computer_go.png"> <a href="http://en.wikipedia.org/wiki/FTP_clients"> FTP Clients</a> : Comparison of FTP client software  
@@ -226,17 +245,17 @@ XOOPS Cube functionality can also be easily extended with Preloads - one file cl
 Modules
 ====
 
-###Xoops X (Ten)  
+### Xoops X (Ten)  
 Modules maintained by the community members
 
 https://github.com/XoopsX
 
-###Xoopscube.jp  
+### Xoopscube.jp  
 Modules up-to-date 
 
 [News, Announcements and Release Notes](http://xoopscube.jp/module/)
 
-###Xoopscube.org  
+### Xoopscube.org  
 
 [Module Compatibility Informations](http://xoopscube.org/modules/pukiwiki/?XOOPSCubeLegacy%2FModuleCompatibility)
 
@@ -259,9 +278,12 @@ http://xoopscube.org/documentation/api
 Site and Support
 ====
 
-http://xoopscube.org
+https://github.com/xoopscube/legacy (uptodate development)
 
-http://xoopscube.jp
+http://xoopscube.jp (uptodate)
+
+http://xoopscube.org (archive)
+
 
 Contribute
 ====

@@ -12,12 +12,7 @@
  |   keeping compatibility with XOOPS 2.0.x <http://www.xoops.org>        |
  *------------------------------------------------------------------------*/
 ini_set('display_errors', 1);
-if (version_compare(PHP_VERSION, '5.4.0', '>=')) {
-    error_reporting(error_reporting() ^ E_STRICT);
-}
-if (version_compare(PHP_VERSION, '6', '>=')) {
-    error_reporting(error_reporting() ^ E_DEPRECATED);
-}
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
 
 include_once './passwd.php';
 if (INSTALL_USER != '' || INSTALL_PASSWD != '') {
